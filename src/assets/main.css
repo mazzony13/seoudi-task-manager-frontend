@@ -1,0 +1,204 @@
+@import './base.css';
+
+.jumbotron{
+  height: 100vh;
+  margin-bottom: 0;
+  background-color: #fff !important;
+}
+
+body{
+  color: #000;
+  background-color: #f0f0f0;
+}
+
+.text-primary{
+  color:rgba(0, 87, 45) !important;
+}
+
+.s-bg{
+  background-color: rgba(234, 245, 220);
+}
+
+.s-button{
+  background-color: rgba(140, 191, 72);
+  border-color:rgba(140, 191, 72) ;
+  color: #fff;
+}
+
+.s-button:hover{
+  background-color: rgba(0, 87, 45) !important;
+  border-color:rgba(0, 87, 45) !important ;
+  color: #fff;
+}
+
+.form-control:focus{
+  border-color: rgba(0, 87, 45) !important;
+  box-shadow:0 0 0 .2rem rgba(140, 191, 72,.25)
+}
+
+.animate {
+  animation-duration: 0.75s;
+  animation-duration: 1s; 
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+  animation-fill-mode: backwards;
+}
+
+/* Fade In */
+.animate.fade {
+  animation-name: animate-fade;
+  animation-timing-function: ease;
+}
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.animate.pop {
+  animation-name: animate-pop;
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* Flip In */
+.animate.flip {
+  animation-name: animate-flip;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  }
+  @keyframes animate-flip {
+  0% {
+  opacity: 0;
+  transform: rotateX(-120deg) scale(0.9,0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: rotateX(0deg) scale(1,1);
+  }
+  }
+
+  
+/* Animation Delays */
+.delay-1 {
+  animation-delay: 0.6s;
+  }
+  .delay-2 {
+  animation-delay: 0.7s;
+  }
+  .delay-3 {
+  animation-delay: 0.8s;
+  }
+  .delay-4 {
+  animation-delay: 0.9s;
+  }
+  .delay-5 {
+  animation-delay: 1s;
+  }
+  .delay-6 {
+  animation-delay: 1.1s;
+  }
+  .delay-7 {
+  animation-delay: 1.2s;
+  }
+  .delay-8 {
+  animation-delay: 1.3s;
+  }
+  .delay-9 {
+  animation-delay: 1.4s;
+  }
+  .delay-10 {
+  animation-delay: 1.5s;
+  }
+  .delay-11 {
+  animation-delay: 1.6s;
+  }
+  .delay-12 {
+  animation-delay: 1.7s;
+  }
+  .delay-13 {
+  animation-delay: 1.8s;
+  }
+  .delay-14 {
+  animation-delay: 1.9s;
+  }
+  .delay-15 {
+  animation-delay: 2s;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    .animate {
+      animation: none !important;
+    }
+  }
+
+  .form-logo
+  {
+    width: 30%;
+    text-align: center;
+  }
+
+  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:  rgba(0, 87, 45) ;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: #fff;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: rgba(140, 191, 72);
+    color: #fff ;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+    .sidebar .sb-logo{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+    .sidebar .sb-logo{
+      display: none;
+    }
+  }
